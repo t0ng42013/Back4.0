@@ -1,0 +1,16 @@
+com\portfolio\LGA\model\Persona.class
+com\portfolio\LGA\service\BannerService.class
+com\portfolio\LGA\service\PersonaService.class
+com\portfolio\LGA\LgaApplication.class
+com\portfolio\LGA\dto\PersonaDto.class
+com\portfolio\LGA\controller\BannerController.class
+com\portfolio\LGA\model\Banner.class
+com\portfolio\LGA\InterService\IPersonaService.class
+com\portfolio\LGA\repository\BannerRepository.class
+com\portfolio\LGA\repository\PersonaRepository.class
+com\portfolio\LGA\controller\PersonaController.class
+com\portfolio\LGA\dto\Mensaje.class
+com\portfolio\LGA\InterService\IBannerService.class
+com\portfolio\LGA\dto\BannerDto.class
+com\portfolio\LGA\service\BannerService$1.class
+com\portfolio\LGA\service\PersonaService$1.class
