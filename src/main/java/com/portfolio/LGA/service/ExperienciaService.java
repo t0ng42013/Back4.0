@@ -2,7 +2,7 @@ package com.portfolio.LGA.service;
 
 import com.portfolio.LGA.InterService.IExperienciaService;
 import com.portfolio.LGA.dto.ExperienciaDto;
-import com.portfolio.LGA.dto.PersonaNotFoundException;
+
 import com.portfolio.LGA.model.Experiencia;
 import com.portfolio.LGA.repository.ExperienciaRepository;
 import org.modelmapper.ModelMapper;
@@ -48,7 +48,7 @@ public class ExperienciaService implements IExperienciaService {
 
     @Override
     public Experiencia editarExperiencia(ExperienciaDto experienciaDto) {
-        Experiencia experiencia = experienciaRepository.findById(experienciaDto.getId()).orElseThrow(() -> new PersonaNotFoundException(experienciaDto.getId()));
+        Experiencia experiencia = experienciaRepository.findById(experienciaDto.getId()).orElse(null);
         modelMapper.map(experienciaDto, experiencia);
         return experienciaRepository.save(experiencia);
     }
