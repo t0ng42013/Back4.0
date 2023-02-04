@@ -2,7 +2,6 @@ package com.portfolio.LGA.service;
 
 import com.portfolio.LGA.InterService.IPersonaService;
 import com.portfolio.LGA.dto.PersonaDto;
-import com.portfolio.LGA.dto.PersonaNotFoundException;
 import com.portfolio.LGA.model.Persona;
 import com.portfolio.LGA.repository.PersonaRepository;
 import org.modelmapper.ModelMapper;
@@ -49,9 +48,8 @@ public class PersonaService implements IPersonaService {
     }
 
     @Override
-
     public Persona editarPersona(PersonaDto personaDto) {
-        Persona persona = personaRepository.findById(personaDto.getId()).orElseThrow(() -> new PersonaNotFoundException(personaDto.getId()));
+        Persona persona = personaRepository.findById(personaDto.getId()).orElse(null);
         modelMapper.map(personaDto, persona);
         persona.setLastUpdated(LocalDateTime.now());
         return personaRepository.save(persona);
