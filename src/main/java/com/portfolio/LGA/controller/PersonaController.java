@@ -23,7 +23,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/persona")
-@CrossOrigin(origins = {"https://lga-portfolio.web.app","http://localhost:4200"})
+//@CrossOrigin(origins = {"https://lga-portfolio.web.app","http://localhost:4200"},allowedHeaders = "*")
+@CrossOrigin("https://lga-portfolio.web.app")
 @OpenAPIDefinition(info = @Info(title = "API CRUD de personas", description = "Operaciones CRUD para personas"))
 public class PersonaController {
     private final IPersonaService personaService;
