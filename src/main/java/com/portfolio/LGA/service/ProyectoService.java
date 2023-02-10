@@ -1,7 +1,6 @@
 package com.portfolio.LGA.service;
 
 import com.portfolio.LGA.InterService.IProyectoService;
-import com.portfolio.LGA.dto.PersonaDto;
 import com.portfolio.LGA.dto.ProyectoDto;
 import com.portfolio.LGA.model.Proyecto;
 import com.portfolio.LGA.repository.ProyectoRepository;
