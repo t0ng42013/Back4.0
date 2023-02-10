@@ -25,7 +25,7 @@ public class ProyectoService implements IProyectoService {
     @Override
     public List<ProyectoDto> verProyecto() {
         List<Proyecto> proyectos = proyectoRepository.findAll();
-        Type listType = new TypeToken<List<PersonaDto>>(){}.getType();
+        Type listType = new TypeToken<List<ProyectoDto>>(){}.getType();
         List<ProyectoDto> proyectoDtos = modelMapper.map(proyectos, listType);
         return proyectoDtos;
     }
